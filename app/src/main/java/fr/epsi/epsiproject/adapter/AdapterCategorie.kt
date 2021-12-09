@@ -23,7 +23,7 @@ open class AdapterCategorie(private val objToAdapt:ArrayList<Cathegorie>)
 
     override fun onBindViewHolder(view: ViewHolder, position: Int) {
         view.btn.text = objToAdapt.get(position).getTitle()
-        view.itemView.setOnClickListener(View.OnClickListener {
+        view.btn.setOnClickListener(View.OnClickListener {
             ProduitsActivity.startProduitsActivity(view.itemView.context
                 ,objToAdapt.get(position).getTitle()
                 ,objToAdapt.get(position).geturl())
