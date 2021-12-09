@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.text.method.LinkMovementMethod
 import android.widget.ImageView
 import android.widget.TextView
 import com.squareup.picasso.Picasso
@@ -15,18 +16,23 @@ class EtudiantActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_etudiant)
-        showBtnBack()
         val getIntent:Intent = intent
-        setTitle(getIntent.getStringExtra("nom"))
+
+        showBtnBack()
+        setTitle(getIntent.getStringExtra("nom")+" "+getIntent.getStringExtra("prenom"))
+
         val textNomPrenom:TextView = findViewById(R.id.nomPrenomEtudiant)
         val textEmail:TextView = findViewById(R.id.emailEtudiant)
         val groupeEtudiant:TextView = findViewById(R.id.groupEtudiant)
         val etudiantImage:ImageView = findViewById(R.id.imageEtudiant)
+        val lienEpsi:TextView = findViewById(R.id.lienEpsi)
 
         textNomPrenom.text = getIntent.getStringExtra("nom")+" "+getIntent.getStringExtra("prenom")
         textEmail.text = getIntent.getStringExtra("email")
         groupeEtudiant.text = getIntent.getStringExtra("groupe")
         Picasso.get().load(getIntent.getStringExtra("urlAvatar")).into(etudiantImage)
+
+        lienEpsi.movementMethod = LinkMovementMethod.getInstance()
     }
 
     companion object{
