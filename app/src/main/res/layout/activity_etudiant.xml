@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".sectionEtudiant.EtudiantActivity">
+
+    <include
+        layout="@layout/layer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imageEtudiant"
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/nomPrenomEtudiant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextCenter"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/emailEtudiant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextCenter"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/groupEtudiant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextCenter"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/lienEpsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextCenter"
+        android:text="@string/hyperlink" />
+</LinearLayout>

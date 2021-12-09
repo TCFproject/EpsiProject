@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EpsiProject</string>
+    <string name="hyperlink"><a href="https://www.epsi.fr/">https://www.epsi.fr/</a></string>
 </resources>
