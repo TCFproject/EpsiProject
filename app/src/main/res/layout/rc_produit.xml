@@ -33,9 +33,9 @@
 
             <TextView
                 android:id="@+id/descProduit"
-                android:layout_width="match_parent"
-                android:layout_height="14sp"
                 style="@style/TextCenter"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
                 android:maxLines="2"
                 android:text="TextView" />
         </LinearLayout>
