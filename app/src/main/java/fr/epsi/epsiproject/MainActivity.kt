@@ -12,7 +12,6 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        showBtnBack()
         setTitle("Epsi")
 
         val buttonZone1:Button = findViewById(R.id.zone1)
