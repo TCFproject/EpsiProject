@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import fr.epsi.epsiproject.R
+import fr.epsi.epsiproject.sectionMenu.ProduitDetailActivity
 import fr.epsi.epsiproject.sectionMenu.obj.Produit
 
 class AdapterProduit(private val objProduit:ArrayList<Produit>)
@@ -28,6 +29,12 @@ class AdapterProduit(private val objProduit:ArrayList<Produit>)
         holder.descProduit.text = objProduit.get(position).desc
         holder.nomProduit.text = objProduit.get(position).nom
         Picasso.get().load(objProduit.get(position).url).into(holder.img)
+        holder.itemView.setOnClickListener(View.OnClickListener {
+            ProduitDetailActivity.startProduitDetailActivity(holder.itemView.context
+                ,objProduit.get(position).nom
+                ,objProduit.get(position).desc
+                ,objProduit.get(position).url)
+        })
     }
 
     override fun getItemCount(): Int {
