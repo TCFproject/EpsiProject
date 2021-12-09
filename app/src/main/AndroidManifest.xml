@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".sectionMenu.ProduitsActivity"
+            android:exported="false" />
+        <activity
             android:name=".sectionMenu.CathegorieActivity"
             android:exported="false" />
         <activity
