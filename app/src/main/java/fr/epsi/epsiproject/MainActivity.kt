@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import fr.epsi.epsiproject.sectionEtudiant.ListEtudiantActivity
+import fr.epsi.epsiproject.sectionMenu.CathegorieActivity
 
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +20,10 @@ class MainActivity : BaseActivity() {
 
         buttonZone1.setOnClickListener(View.OnClickListener {
             ListEtudiantActivity.startListEtudiantActivity(application)
+        })
+
+        buttonZone2.setOnClickListener(View.OnClickListener {
+            CathegorieActivity.startCathegorieActivity(application)
         })
     }
 
