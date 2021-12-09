@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import fr.epsi.epsiproject.BaseActivity
 import fr.epsi.epsiproject.R
-import fr.epsi.epsiproject.adapter.Adapter
+import fr.epsi.epsiproject.adapter.AdapterCategorie
 import fr.epsi.epsiproject.sectionMenu.obj.Cathegorie
 import okhttp3.*
 import org.json.JSONObject
@@ -31,7 +31,7 @@ class CathegorieActivity : BaseActivity() {
         recycler.layoutManager = LinearLayoutManager(this)
 
         val listTest = ArrayList<Cathegorie>()
-        val adapter = Adapter(listTest)
+        val adapter = AdapterCategorie(listTest)
         recycler.adapter = adapter
 
         okHttpClient.newCall(request).enqueue(object:Callback{
