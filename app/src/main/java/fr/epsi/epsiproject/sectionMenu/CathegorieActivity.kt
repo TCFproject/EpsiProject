@@ -22,7 +22,7 @@ class CathegorieActivity : BaseActivity() {
 
         val okHttpClient = OkHttpClient.Builder().build()
         val request = Request.Builder()
-            .url("http://djemam.com/epsi/categories.json")
+            .url("https://djemam.com/epsi/categories.json")
             .get()
             .cacheControl(CacheControl.FORCE_NETWORK)
             .build()
